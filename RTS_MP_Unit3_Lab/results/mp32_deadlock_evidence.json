@@ -1,0 +1,61 @@
+{
+  "version": "flawed",
+  "capacity": 4,
+  "producers": 3,
+  "consumers": 3,
+  "items_per_producer": 80,
+  "attempts": [
+    {
+      "attempt": 1,
+      "deadlock": true,
+      "stalled_s": 2.096,
+      "elapsed_s": 2.3,
+      "progress": {
+        "produced": 4,
+        "consumed": 0,
+        "buffer_occupancy": 4
+      },
+      "snapshot": [
+        {
+          "task": "P0",
+          "role": "producer",
+          "holding": [],
+          "waiting_for": null
+        },
+        {
+          "task": "P1",
+          "role": "producer",
+          "holding": [
+            "buffer_lock"
+          ],
+          "waiting_for": "buffer space (needs a consumer to pop)"
+        },
+        {
+          "task": "P2",
+          "role": "producer",
+          "holding": [],
+          "waiting_for": null
+        },
+        {
+          "task": "C0",
+          "role": "consumer",
+          "holding": [
+            "stats_lock"
+          ],
+          "waiting_for": "buffer_lock"
+        }
+      ],
+      "live_threads": [
+        "C0",
+        "C1",
+        "C2",
+        "MainThread",
+        "P0",
+        "P1",
+        "P2"
+      ]
+    }
+  ],
+  "reproduced": true,
+  "reproduced_on_attempt": 1
+}

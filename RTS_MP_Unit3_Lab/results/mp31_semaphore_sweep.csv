@@ -1,0 +1,4 @@
+count,tasks,max_holders,immediate_tasks,blocked_tasks,mean_wait_ms,max_wait_ms,total_hold_ms,makespan_ms
+1,8,1,1,7,118.615,247.602,292.0,300.8
+3,8,3,3,5,26.205,79.732,292.0,139.8
+6,8,6,6,2,5.767,23.572,292.0,77.0

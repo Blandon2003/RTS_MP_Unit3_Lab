@@ -1,0 +1,33 @@
+### $ python interrupt_latency_sim.py --full --timeline --seconds 20 --sweep-seconds 10
+
+=== configuration 'baseline' (20s run) ===
+source     pri   occ  int min  int mean  int max  resp min  resp mean  resp p95  resp max  preempt
+IRQ_HIGH     1   506     0.00      0.66    41.00      7.26      11.05     13.24    219.65        0
+IRQ_MED      2   202     0.00      0.53    39.72     11.45      19.20     22.84    182.34       68
+IRQ_LOW      3    81     0.00      0.92     6.14     19.46      34.78     44.41    126.85       42
+
+=== configuration 'burst' (20s run) ===
+source     pri   occ  int min  int mean  int max  resp min  resp mean  resp p95  resp max  preempt
+IRQ_HIGH     1  1338     0.00      3.05   187.92      7.20      22.78     88.78    255.82        1
+IRQ_MED      2   201     0.00      4.10    99.88     11.28      80.00    355.38    532.81      200
+IRQ_LOW      3    80     0.00      2.45    30.85     26.93     217.45    873.88   1293.55      166
+
+=== configuration 'long_top' (20s run) ===
+source     pri   occ  int min  int mean  int max  resp min  resp mean  resp p95  resp max  preempt
+IRQ_HIGH     1   515     0.00      4.53   214.46     18.44      80.63    293.16    987.90        9
+IRQ_MED      2   206     0.00     13.37   291.62     11.50     166.47    716.87   1633.37       58
+IRQ_LOW      3    82     0.00     11.69   123.89     22.88     613.00   2343.75   3953.24       89
+
+=== arrival-rate sweep of IRQ_HIGH (lowest-priority victim: IRQ_LOW) ===
+ high period ms  high occ  low mean ms  low p95 ms  low max ms low preempt
+           15.0       756      5150.41     9413.85     9944.45          79
+           25.0       432       151.04      773.71      891.54          49
+           40.0       257        61.37      168.71      361.27          26
+           60.0       169        49.85      108.68      126.03          18
+          100.0       101        80.81      283.82      552.49           9
+          150.0        66        37.46       61.39      122.51          13
+
+wrote C:\Users\AH THEC\Documents\document\computer engineering level 3\semester 2\Mobile application\acoustiguard (1)\RTS_MP_Unit3_Lab\results\mp33_results.json
+wrote C:\Users\AH THEC\Documents\document\computer engineering level 3\semester 2\Mobile application\acoustiguard (1)\RTS_MP_Unit3_Lab\results\mp33_occurrence_log.csv (3211 occurrences)
+wrote C:\Users\AH THEC\Documents\document\computer engineering level 3\semester 2\Mobile application\acoustiguard (1)\RTS_MP_Unit3_Lab\figures\fig333_timeline.png
+[exit 0]

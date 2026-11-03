@@ -1,0 +1,8 @@
+### $ python semaphore_pool.py --sweep 1,3,6 --tasks 8
+Semaphore-count sweep (lab task 2):
+ count  max holders  immediate  blocked  mean wait ms  max wait ms  makespan ms
+     1            1          1        7       118.615      247.602        300.8
+     3            3          3        5        26.205       79.732        139.8
+     6            6          6        2         5.767       23.572         77.0
+wrote C:\Users\AH THEC\Documents\document\computer engineering level 3\semester 2\Mobile application\acoustiguard (1)\RTS_MP_Unit3_Lab\results\mp31_semaphore_sweep.csv
+[exit 0]

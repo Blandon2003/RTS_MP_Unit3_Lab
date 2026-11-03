@@ -1,0 +1,14 @@
+=== race_fixed.py, five threads, three consecutive runs ===
+
+--- run 1 ---
+threads=5  iterations/thread=1000
+expected=5000  actual=5000  lost_updates=0
+elapsed=8.062s
+--- run 2 ---
+threads=5  iterations/thread=1000
+expected=5000  actual=5000  lost_updates=0
+elapsed=5.492s
+--- run 3 ---
+threads=5  iterations/thread=1000
+expected=5000  actual=5000  lost_updates=0
+elapsed=5.469s

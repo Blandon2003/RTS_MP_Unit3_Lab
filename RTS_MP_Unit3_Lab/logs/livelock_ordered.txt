@@ -1,0 +1,10 @@
+### $ python livelock_demo.py --mode ordered --seconds 3 --retry-ms 0.5
+mode=ordered  duration=3.0s  back-off=0.50 ms
+  completed critical sections = 4030
+  retries (back-off events)   = 0 (task0=0, task1=0)
+  sampled (elapsed s, completed, total retries):
+    t= 0.84s  completed=719   retries=0
+    t= 1.60s  completed=1471  retries=0
+    t= 2.35s  completed=2751  retries=0
+  => consistent lock ordering: 4030 completions in the same window with the same polling loop
+[exit 0]

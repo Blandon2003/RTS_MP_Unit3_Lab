@@ -1,0 +1,14 @@
+=== race_demo.py, ten threads (lab task 1), three runs ===
+
+--- run 1 ---
+threads=10  iterations/thread=1000
+expected=10000  actual=1000  lost_updates=9000 (90.00%)
+elapsed=3.343s
+--- run 2 ---
+threads=10  iterations/thread=1000
+expected=10000  actual=2865  lost_updates=7135 (71.35%)
+elapsed=4.449s
+--- run 3 ---
+threads=10  iterations/thread=1000
+expected=10000  actual=1002  lost_updates=8998 (89.98%)
+elapsed=6.175s

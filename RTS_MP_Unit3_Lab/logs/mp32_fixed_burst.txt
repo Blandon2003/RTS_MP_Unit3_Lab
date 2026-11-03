@@ -1,0 +1,8 @@
+### $ python buffer_fixed.py --capacity 5 --producers 3 --consumers 3 --items 240 --service-ms 1.0 --burst 40 --burst-pause-ms 8.0
+capacity=5 producers=3 consumers=3 items=240
+  watchdog stayed silent - no stall, fix verified
+  produced=240 consumed=240 balanced=True
+  elapsed=0.237s  throughput=1011.2 items/s
+  producer wait for space: mean=1.221ms p95=3.260ms max=32.019ms (blocked 134 times)
+  consumer wait for items: mean=0.005ms p95=0.010ms max=0.042ms (blocked 0 times)
+[exit 0]

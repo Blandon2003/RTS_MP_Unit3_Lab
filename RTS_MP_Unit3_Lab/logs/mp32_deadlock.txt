@@ -1,0 +1,22 @@
+### $ python buffer_flawed.py --capacity 4 --producers 3 --consumers 3 --items 240 --attempts 5
+
+--- attempt 1: capacity=4 producers=3 consumers=3 items/producer=80 ---
+==============================================================================
+WATCHDOG: DEADLOCK DETECTED - no progress for 2.10s (run age 2.30s)
+  items produced = 4, items consumed = 0, buffer occupancy = 4 / capacity 4
+  LOCK-WAIT SNAPSHOT (task -> holds -> waits for):
+    P0  role=producer  holds=[-                         ] waiting_for=None
+    P1  role=producer  holds=[buffer_lock               ] waiting_for=buffer space (needs a consumer to pop)
+    P2  role=producer  holds=[-                         ] waiting_for=None
+    C0  role=consumer  holds=[stats_lock                ] waiting_for=buffer_lock
+  live task threads: C0, C1, C2, MainThread, P0, P1, P2
+  Coffman conditions in force: mutual exclusion (two exclusive locks),
+  hold-and-wait (each role holds one lock while requesting the other),
+  no preemption (a spinning holder cannot be divested of its lock),
+  circular wait (P holds buffer_lock and needs stats_lock;
+  C holds stats_lock and needs buffer_lock).
+==============================================================================
+
+reproduced=True attempt=1  evidence -> C:\Users\AH THEC\Documents\document\computer engineering level 3\semester 2\Mobile application\acoustiguard (1)\RTS_MP_Unit3_Lab\results\mp32_deadlock_evidence.json
+stuck tasks: P1(producer) holds ['buffer_lock'] wants buffer space (needs a consumer to pop), C0(consumer) holds ['stats_lock'] wants buffer_lock
+[exit 2]

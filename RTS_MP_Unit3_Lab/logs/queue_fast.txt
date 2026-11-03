@@ -1,0 +1,6 @@
+### $ python queue_sim.py --maxsize 5 --items 30 --service 0 --cadence 0.010
+maxsize=5  items=30  consumer_service=0.0ms
+  latency min/mean/max = 0.081 / 0.152 / 0.379 ms (p95 0.354 ms)
+  blocking puts=0  total producer blocked=0.000 ms
+  run time=0.337s
+[exit 0]

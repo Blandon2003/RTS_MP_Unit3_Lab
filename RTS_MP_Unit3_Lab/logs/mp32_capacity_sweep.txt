@@ -1,0 +1,18 @@
+### $ python capacity_sweep.py 
+capacity=  1  throughput=  1912.2 items/s  producer wait=  1.300 ms  consumer wait=  0.127 ms  blocked(P/C)=419/29  deadlocks=0
+capacity=  2  throughput=  2723.8 items/s  producer wait=  0.801 ms  consumer wait=  0.043 ms  blocked(P/C)=315/5  deadlocks=0
+capacity=  5  throughput=  2690.0 items/s  producer wait=  0.838 ms  consumer wait=  0.029 ms  blocked(P/C)=318/6  deadlocks=0
+capacity= 10  throughput=  2717.8 items/s  producer wait=  0.762 ms  consumer wait=  0.032 ms  blocked(P/C)=317/6  deadlocks=0
+capacity= 25  throughput=  2688.1 items/s  producer wait=  0.827 ms  consumer wait=  0.004 ms  blocked(P/C)=313/0  deadlocks=0
+capacity= 50  throughput=  2727.0 items/s  producer wait=  0.757 ms  consumer wait=  0.005 ms  blocked(P/C)=303/0  deadlocks=0
+
+marginal gain per extra buffer slot:
+   1 ->  2:   +811.6 items/s over 1 slots = +811.60 items/s per slot
+   2 ->  5:    -33.8 items/s over 3 slots =  -11.27 items/s per slot
+   5 -> 10:    +27.8 items/s over 5 slots =   +5.56 items/s per slot
+  10 -> 25:    -29.7 items/s over 15 slots =   -1.98 items/s per slot
+  25 -> 50:    +38.9 items/s over 25 slots =   +1.56 items/s per slot
+
+wrote C:\Users\AH THEC\Documents\document\computer engineering level 3\semester 2\Mobile application\acoustiguard (1)\RTS_MP_Unit3_Lab\results\mp32_capacity_sweep.csv
+wrote C:\Users\AH THEC\Documents\document\computer engineering level 3\semester 2\Mobile application\acoustiguard (1)\RTS_MP_Unit3_Lab\figures\fig323_throughput_vs_capacity.png
+[exit 0]

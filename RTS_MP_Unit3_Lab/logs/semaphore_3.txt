@@ -1,0 +1,16 @@
+### $ python semaphore_pool.py --count 3 --tasks 8
+semaphore count=3  tasks=8
+  max simultaneous holders = 3 (must be <= 3)
+  tasks that proceeded immediately = 3, tasks that blocked = 5
+  wait time mean=26.277 ms  max=80.856 ms
+  per-task wait / hold (ms):
+    task 0: waited   0.018  held   23.6
+    task 1: waited   0.007  held   26.5
+    task 2: waited   0.002  held   27.8
+    task 3: waited  24.383  held   59.6
+    task 4: waited  26.563  held   52.6
+    task 5: waited  28.011  held   22.2
+    task 6: waited  50.378  held   30.2
+    task 7: waited  80.856  held   49.6
+  makespan=145.3 ms
+[exit 0]

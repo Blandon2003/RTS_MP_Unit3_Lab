@@ -1,0 +1,10 @@
+### $ python queue_sim.py --sweep 1,2,5,10,25 --items 30 --service 0.001
+Queue capacity sweep (lab task 4), consumer service 1.0 ms, producer cadence 0.0 ms:
+ maxsize   mean ms    p95 ms    max ms  blocking puts  blocked ms
+       1     2.821     3.129     3.253             28      42.000
+       2     4.295     4.897     4.900             27      41.772
+       5     8.504    11.283    11.485             24      38.561
+      10    13.923    18.379    18.417             19      29.926
+      25    18.783    32.560    34.094              5       5.635
+wrote C:\Users\AH THEC\Documents\document\computer engineering level 3\semester 2\Mobile application\acoustiguard (1)\RTS_MP_Unit3_Lab\results\mp31_queue_sweep.csv
+[exit 0]

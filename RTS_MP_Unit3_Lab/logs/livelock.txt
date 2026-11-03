@@ -1,0 +1,10 @@
+### $ python livelock_demo.py --mode livelock --seconds 3 --retry-ms 0.5
+mode=livelock  duration=3.0s  back-off=0.50 ms
+  completed critical sections = 0
+  retries (back-off events)   = 4621 (task0=2312, task1=2309)
+  sampled (elapsed s, completed, total retries):
+    t= 0.75s  completed=0     retries=1413
+    t= 1.50s  completed=0     retries=2842
+    t= 2.74s  completed=0     retries=4268
+  => livelock: both tasks stayed runnable the whole window (4621 retries) and produced 0 completed critical sections (Section 3.8)
+[exit 0]

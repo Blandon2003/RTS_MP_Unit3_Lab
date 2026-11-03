@@ -1,0 +1,5 @@
+threads,updates_per_thread,critical_hold_ms,no_lock_ms,mutex_ms,serialisation_x,no_lock_correct,no_lock_final,expected,lost_updates,mutex_final
+1,300,0.25,216.5,288.5,1.33,True,300,300,0,300
+2,300,0.25,233.5,526.8,2.26,False,300,600,300,600
+5,300,0.25,222.3,1122.2,5.05,False,300,1500,1200,1500
+10,300,0.25,228.2,2356.2,10.33,False,301,3000,2699,3000
